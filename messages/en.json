@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "digitalNomad": "I'm a Digital Nomad",
+    "invest": "I Want to Invest",
+    "retired": "I'm Retired",
+    "health": "Get Health Policy",
+    "usCitizens": "US Citizens Services",
+    "getAdvice": "Get Advice Now",
+    "services": "Services",
+    "blog": "Blog",
+    "aboutUs": "About Us",
+    "faqs": "FAQs",
+    "contact": "Contact",
+    "quoteNow": "Quote Now",
+    "workWithUs": "Work With Us",
+    "becomePartner": "Become a Partner"
+  },
+  "hero": {
+    "badge": "Trusted by 10,000+ Expats Worldwide",
+    "title1": "Live, Invest, &",
+    "title2": "Retire in Colombia",
+    "subtitle": "Your premier advisory for legal residency, investment opportunities, and healthcare solutions in Colombia.",
+    "cta1": "Get Advice Now",
+    "cta2": "View Services",
+    "rating": "4.9/5 Based on Google Reviews"
+  },
+  "stats": {
+    "advised": "Foreigners Advised",
+    "visas": "Visas Approved",
+    "fdi": "Foreign Direct Investment",
+    "health": "Health Policies Issued"
+  },
+  "personas": {
+    "title": "We Understand Your Goals",
+    "subtitle": "Personalized Guidance",
+    "mainTitle": "Tailored Solutions for Your Journey",
+    "nomad": {
+      "title": "I'm a Digital Nomad",
+      "desc": "Seamless visa processing and life integration."
+    },
+    "investor": {
+      "title": "I Want to Invest",
+      "desc": "Real estate and business investment guidance."
+    },
+    "retiree": {
+      "title": "I'm Retired",
+      "desc": "Secure your retirement visa and health policy."
+    },
+    "health": {
+      "title": "Get Health Policy",
+      "desc": "Comprehensive health insurance for expats."
+    },
+    "usCitizen": {
+      "title": "US Citizens Services",
+      "desc": "Apostilles, FBI checks, and official translations."
+    }
+  },
+  "services": {
+    "title": "Our Specialized Services",
+    "explore": "Explore All Services",
+    "visa": "Colombia Visas",
+    "visaDesc": "Expert guidance for nomad, retirement, and investment visas.",
+    "business": "Business in Colombia",
+    "businessDesc": "Company incorporation and accounting services.",
+    "health": "Health Policy",
+    "healthDesc": "SURA EPS and Prepaid medicine tailored for foreigners.",
+    "realEstate": "Real Estate",
+    "realEstateDesc": "Buy, sell, or rent properties safely in Colombia.",
+    "learnMore": "Learn More"
+  },
+  "lostPassport": {
+    "hero_title": "Lost Your Passport in Colombia?",
+    "hero_sub": "We're Here to Help — 24/7",
+    "emergency_cta": "Contact Us Now on WhatsApp"
+  },
+  "tour": {
+    "hero_title": "Explore Colombia Like Never Before",
+    "book_now": "Book This Tour"
+  }
+}

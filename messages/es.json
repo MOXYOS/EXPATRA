@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "digitalNomad": "Soy Nómada Digital",
+    "invest": "Quiero Invertir",
+    "retired": "Soy Jubilado",
+    "health": "Obtener Póliza de Salud",
+    "usCitizens": "Servicios Ciudadanos EE.UU.",
+    "getAdvice": "Obtener Asesoría",
+    "services": "Servicios",
+    "blog": "Blog",
+    "aboutUs": "Nosotros",
+    "faqs": "Preguntas Frecuentes",
+    "contact": "Contacto",
+    "quoteNow": "Cotizar Ahora",
+    "workWithUs": "Trabaja con Nosotros",
+    "becomePartner": "Ser Socio"
+  },
+  "hero": {
+    "badge": "Con la confianza de más de 10.000 expatriados",
+    "title1": "Vive, Invierte y",
+    "title2": "Retírate en Colombia",
+    "subtitle": "Su asesoría de primer nivel para residencia legal, oportunidades de inversión y soluciones de salud en Colombia.",
+    "cta1": "Obtener Asesoría Ahora",
+    "cta2": "Ver Servicios",
+    "rating": "4.9/5 Basado en Google Reviews"
+  },
+  "stats": {
+    "advised": "Extranjeros Asesorados",
+    "visas": "Visas Aprobadas",
+    "fdi": "Inversión Extranjera",
+    "health": "Pólizas de Salud Emitidas"
+  },
+  "personas": {
+    "title": "Entendemos sus Objetivos",
+    "subtitle": "Orientación Personalizada",
+    "mainTitle": "Soluciones a Medida para su Viaje",
+    "nomad": {
+      "title": "Soy Nómada Digital",
+      "desc": "Procesamiento de visa e integración de vida sin problemas."
+    },
+    "investor": {
+      "title": "Quiero Invertir",
+      "desc": "Guía de inversión en bienes raíces y negocios."
+    },
+    "retiree": {
+      "title": "Soy Jubilado",
+      "desc": "Asegure su visa de jubilación y póliza de salud."
+    },
+    "health": {
+      "title": "Obtener Póliza de Salud",
+      "desc": "Seguro de salud integral para expatriados."
+    },
+    "usCitizen": {
+      "title": "Servicios Ciudadanos EE.UU.",
+      "desc": "Apostillas, verificaciones del FBI y traducciones oficiales."
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios Especializados",
+    "explore": "Explorar Todos los Servicios",
+    "visa": "Visas Colombia",
+    "visaDesc": "Guía experta para visas de nómada, jubilación e inversión.",
+    "business": "Negocios en Colombia",
+    "businessDesc": "Constitución de empresas y servicios contables.",
+    "health": "Póliza de Salud",
+    "healthDesc": "SURA EPS y medicina prepagada diseñada para extranjeros.",
+    "realEstate": "Bienes Raíces",
+    "realEstateDesc": "Compre, venda o alquile propiedades de forma segura en Colombia.",
+    "learnMore": "Saber Más"
+  },
+  "lostPassport": {
+    "hero_title": "¿Perdió su pasaporte en Colombia?",
+    "hero_sub": "Estamos aquí para ayudar — 24/7",
+    "emergency_cta": "Contáctenos por WhatsApp"
+  },
+  "tour": {
+    "hero_title": "Explore Colombia como nunca antes",
+    "book_now": "Reservar este Tour"
+  }
+}
