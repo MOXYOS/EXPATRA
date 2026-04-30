@@ -1,29 +1,127 @@
 "use client"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Menu, Briefcase, Building2, User, Shield, ArrowRight, MessageCircle, BookOpen } from "lucide-react"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
-export function MobileMenu() {
+export function MobileMenu({ scrolled }: { scrolled: boolean }) {
+  const menuItems = [
+    {
+      title: "I'm a Digital Nomad",
+      icon: <Briefcase className="size-5 text-primary" />,
+      sublinks: [
+        { href: "/colombia-visas/tourism-stamp-extension", label: "Tourism Stamp Extension" },
+        { href: "/colombia-visas/digital-nomad-visa", label: "Digital Nomad Visa" },
+        { href: "/insurance-colombia", label: "Health Policy" },
+        { href: "/other-services/fbi-background-check", label: "FBI Background Check" }
+      ]
+    },
+    {
+      title: "I Want to Invest",
+      icon: <Building2 className="size-5 text-accent" />,
+      sublinks: [
+        { href: "/business-in-colombia/company-incorporation", label: "Company Creation (SAS)" },
+        { href: "/colombia-visas/business-owner-visa", label: "Business Visa" },
+        { href: "/real-estate/property-listings", label: "Property Purchase" },
+        { href: "/colombia-visas/real-estate-visa", label: "Real Estate Investment Visa" }
+      ]
+    },
+    {
+      title: "I'm Retired",
+      icon: <User className="size-5 text-colombia-yellow" />,
+      sublinks: [
+        { href: "/colombia-visas/retirement-visa", label: "Retirement Visa (M-Pension)" },
+        { href: "/insurance-colombia", label: "Health Policy" },
+        { href: "/other-services/us-apostille", label: "US Apostille" }
+      ]
+    },
+    {
+      title: "Get Health Policy",
+      icon: <Shield className="size-5 text-success" />,
+      sublinks: [
+        { href: "/insurance-colombia/tourism-policy", label: "For Tourism" },
+        { href: "/insurance-colombia/visa-policy", label: "For Visa Application" },
+        { href: "/quote-now", label: "Get a Free Quote" }
+      ]
+    },
+    {
+      title: "US Citizens Services",
+      icon: <ArrowRight className="size-5 text-colombia-red" />,
+      sublinks: [
+        { href: "/other-services/passport-renewal", label: "Passport Renewal" },
+        { href: "/other-services/fbi-background-check", label: "FBI Check" },
+        { href: "/other-services/us-apostille", label: "US Apostille" }
+      ]
+    }
+  ]
+
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className="p-2 -mr-2">
-          <Menu size={24} />
+        <button className={cn(
+          "p-2 rounded-full transition-colors",
+          scrolled ? "text-primary hover:bg-primary/10" : "text-white hover:bg-white/10"
+        )}>
+          <Menu size={28} />
         </button>
       </SheetTrigger>
-      <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-        <nav className="flex flex-col gap-4 mt-8">
-          <Link href="/colombia-visas" className="text-lg font-medium">I&apos;m a Digital Nomad</Link>
-          <Link href="/business-in-colombia" className="text-lg font-medium">I Want to Invest</Link>
-          <Link href="/retirement-colombia" className="text-lg font-medium">I&apos;m Retired</Link>
-          <Link href="/insurance-colombia" className="text-lg font-medium">Get Health Policy</Link>
-          <Link href="/us-citizens-services" className="text-lg font-medium">US Citizens Services</Link>
-          <div className="h-px bg-border my-2" />
-          <Link href="/services" className="text-muted-foreground">Services</Link>
-          <Link href="/blog" className="text-muted-foreground">Blog</Link>
-          <Link href="/about-us" className="text-muted-foreground">About Us</Link>
-          <Link href="/contact-us" className="text-muted-foreground">Contact</Link>
-        </nav>
+      <SheetContent side="right" className="w-full sm:max-w-md p-0 overflow-y-auto">
+        <SheetHeader className="p-6 border-b text-left">
+          <SheetTitle className="font-display text-2xl font-bold text-primary">Expatra Menu</SheetTitle>
+        </SheetHeader>
+        
+        <div className="p-4">
+          <Accordion type="single" collapsible className="w-full">
+            {menuItems.map((item, idx) => (
+              <AccordionItem key={idx} value={`item-${idx}`} className="border-none mb-2">
+                <AccordionTrigger className="hover:no-underline p-4 bg-surface rounded-2xl border border-transparent hover:border-primary/10 transition-all">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="bg-white size-10 rounded-xl flex items-center justify-center shadow-sm">
+                      {item.icon}
+                    </div>
+                    <span className="font-bold text-base text-primary">{item.title}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="pt-2 pb-4 px-4">
+                  <div className="flex flex-col gap-1 pl-14 border-l-2 border-primary/10 ml-5">
+                    {item.sublinks.map((sub, sIdx) => (
+                      <Link 
+                        key={sIdx} 
+                        href={sub.href}
+                        className="py-3 text-sm font-medium text-muted-foreground hover:text-primary transition-colors flex items-center justify-between group"
+                      >
+                        {sub.label}
+                        <ArrowRight className="size-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                      </Link>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          <div className="mt-8 space-y-2">
+            <Link href="/blog" className="flex items-center gap-3 p-4 rounded-2xl hover:bg-surface transition-colors">
+              <BookOpen className="size-5 text-muted-foreground" />
+              <span className="font-semibold text-primary">Blog & Guides</span>
+            </Link>
+            <Link href="/faqs" className="flex items-center gap-3 p-4 rounded-2xl hover:bg-surface transition-colors">
+              <MessageCircle className="size-5 text-muted-foreground" />
+              <span className="font-semibold text-primary">FAQs</span>
+            </Link>
+          </div>
+
+          <div className="mt-12 space-y-4 px-4 pb-12">
+            <Button className="w-full h-14 rounded-2xl bg-primary hover:bg-primary-dark text-white font-bold text-lg shadow-lg shadow-primary/10">
+              Get Advice Now →
+            </Button>
+            <Button variant="outline" className="w-full h-14 rounded-2xl border-primary/20 text-primary font-bold text-lg">
+              Contact Support
+            </Button>
+          </div>
+        </div>
       </SheetContent>
     </Sheet>
   )

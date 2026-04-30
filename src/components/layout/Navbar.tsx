@@ -55,7 +55,7 @@ export function Navbar() {
           </div>
           
           <div className="lg:hidden flex items-center">
-            <MobileMenu />
+            <MobileMenu scrolled={scrolled} />
           </div>
         </div>
         
