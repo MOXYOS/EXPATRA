@@ -1,4 +1,5 @@
 "use client"
+import { useTranslations } from "next-intl"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Menu, Briefcase, Building2, User, Shield, ArrowRight, MessageCircle, BookOpen } from "lucide-react"
