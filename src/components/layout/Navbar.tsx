@@ -35,15 +35,15 @@ export function Navbar() {
       transition={{ duration: 0.35, ease: "easeInOut" }}
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled 
-          ? "bg-background/95 backdrop-blur-md shadow-lg text-foreground py-0" 
-          : "bg-gradient-to-b from-black/60 to-transparent text-white py-2"
-      }`}
+          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-primary/5 py-0" 
+          : "bg-white/50 backdrop-blur-sm py-2"
+      } text-primary`}
     >
       <TopBar />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="font-display font-bold text-2xl tracking-tight flex items-center gap-2">
-             <span className={scrolled ? "text-primary" : "text-white"}>Expatra</span>
+             <span className="text-primary">Expatra</span>
           </Link>
           
           <div className="hidden lg:flex items-center flex-1 justify-center relative">
@@ -61,7 +61,7 @@ export function Navbar() {
           </div>
         </div>
         
-        <div className={`hidden lg:flex items-center justify-center gap-6 pb-3 text-sm font-medium transition-colors ${scrolled ? "text-muted-foreground" : "text-white/80"}`}>
+        <div className={`hidden lg:flex items-center justify-center gap-6 pb-3 text-sm font-medium transition-colors ${scrolled ? "text-primary/60" : "text-primary/80"}`}>
           <Link href="/services" className="hover:text-primary transition-colors">{t("services")} ▾</Link>
           <Link href="/blog" className="hover:text-primary transition-colors">{t("blog")}</Link>
           <Link href="/about-us" className="hover:text-primary transition-colors">{t("aboutUs")}</Link>

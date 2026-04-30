@@ -17,8 +17,8 @@ import { ArrowRight, BookOpen, MessageCircle, Shield, Building2, Home, User, Bri
 export function MegaMenu({ scrolled }: { scrolled: boolean }) {
   const t = useTranslations("nav")
   const triggerClass = cn(
-    "group bg-transparent hover:bg-white/10 focus:bg-white/10 data-[state=open]:bg-white/10 transition-all duration-300 rounded-full px-4 py-2 text-sm font-medium",
-    scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-white/80"
+    "group bg-transparent hover:bg-primary/5 focus:bg-primary/5 data-[state=open]:bg-primary/5 transition-all duration-300 rounded-full px-4 py-2 text-sm font-medium",
+    "text-primary/80 hover:text-primary"
   );
 
   return (

@@ -10,39 +10,24 @@ export function Hero() {
   const t = useTranslations("hero")
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-primary-dark">
-      {/* Cinematic Background Layer */}
-      <div className="absolute inset-0 z-0">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="object-cover w-full h-full opacity-30"
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-metropolis-at-night-11425-large.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-dark via-primary-dark/80 to-primary-dark" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)]" />
-        {/* Animated accent lights */}
-        <motion.div 
-          animate={{ opacity: [0.1, 0.3, 0.1], scale: [1, 1.2, 1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-accent/20 rounded-full blur-[120px]"
-        />
+    <section className="relative min-h-[90vh] flex items-center justify-center pt-48 pb-20 overflow-hidden bg-white">
+      {/* Subtle Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-10%] size-[600px] bg-accent/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] size-[500px] bg-primary/5 rounded-full blur-[100px]" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <motion.div 
           variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-col items-center"
+          initial="initial"
+          animate="animate"
+          className="flex flex-col items-center text-center"
         >
           {/* Trust Badge */}
           <motion.div 
             variants={fadeUp}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 text-white/80 text-xs font-semibold uppercase tracking-widest shadow-2xl"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-8 text-primary/70 text-xs font-bold uppercase tracking-widest shadow-sm"
           >
             <ShieldCheck className="size-4 text-accent" />
             <span>{t("badge")}</span>
@@ -50,9 +35,9 @@ export function Hero() {
 
           <motion.h1 
             variants={fadeUp}
-            className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight leading-[1.1]"
+            className="font-display text-5xl md:text-7xl lg:text-9xl font-black text-primary mb-8 tracking-tight leading-[0.95]"
           >
-            <span className="block">{t("title1")}</span>
+            <span className="block mb-2">{t("title1")}</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-colombia-yellow to-accent animate-gradient-x">
               {t("title2")}
             </span>
@@ -60,20 +45,20 @@ export function Hero() {
 
           <motion.p 
             variants={fadeUp}
-            className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-12 leading-relaxed font-medium"
+            className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-14 leading-relaxed font-medium"
           >
             {t("subtitle")}
           </motion.p>
 
           <motion.div 
             variants={fadeUp}
-            className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full sm:w-auto"
+            className="flex flex-col sm:flex-row gap-5 items-center justify-center w-full sm:w-auto"
           >
-            <Button size="lg" className="w-full sm:w-auto h-14 px-10 bg-accent hover:bg-accent-dark text-white rounded-full font-bold text-lg shadow-xl shadow-accent/20 transition-all hover:scale-105 group">
+            <Button size="lg" className="w-full sm:w-auto h-16 px-12 bg-primary hover:bg-primary-dark text-white rounded-full font-bold text-xl shadow-2xl shadow-primary/20 transition-all hover:scale-105 group">
               {t("cta1")}
               <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-10 border-white/20 text-white hover:bg-white/10 rounded-full font-bold text-lg backdrop-blur-sm transition-all bg-transparent">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto h-16 px-12 border-primary/20 text-primary hover:bg-primary/5 rounded-full font-bold text-xl transition-all bg-white">
               {t("cta2")}
             </Button>
           </motion.div>
@@ -81,13 +66,13 @@ export function Hero() {
           {/* Social Proof */}
           <motion.div 
             variants={fadeUp}
-            className="mt-16 flex items-center gap-6"
+            className="mt-20 flex flex-col items-center gap-4"
           >
-            <div className="flex -space-x-3">
-              {[1,2,3,4].map(i => (
-                <div key={i} className="relative size-10 rounded-full border-2 border-primary-dark bg-surface shadow-lg flex items-center justify-center overflow-hidden">
+            <div className="flex -space-x-4">
+              {[1,2,3,4,5,6].map(i => (
+                <div key={i} className="relative size-12 rounded-full border-4 border-white bg-slate-100 shadow-xl overflow-hidden ring-1 ring-primary/5">
                    <Image 
-                     src={`https://i.pravatar.cc/100?img=${i+10}`} 
+                     src={`https://i.pravatar.cc/100?img=${i+20}`} 
                      alt="User" 
                      fill
                      className="object-cover"
@@ -95,18 +80,18 @@ export function Hero() {
                 </div>
               ))}
             </div>
-            <div className="text-left">
-              <div className="flex gap-0.5 mb-1">
-                {[1,2,3,4,5].map(i => <Star key={i} className="size-3 text-colombia-yellow fill-colombia-yellow" />)}
+            <div className="flex flex-col items-center">
+              <div className="flex gap-1 mb-2">
+                {[1,2,3,4,5].map(i => <Star key={i} className="size-5 text-colombia-yellow fill-colombia-yellow shadow-sm" />)}
               </div>
-              <p className="text-xs font-semibold text-white/50 tracking-wide uppercase">{t("rating")}</p>
+              <p className="text-sm font-bold text-primary/40 tracking-wider uppercase">{t("rating")}</p>
             </div>
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Decorative Floor */}
-      <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
-    </div>
+      
+      {/* Clean Bottom Divider */}
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none" />
+    </section>
   )
 }

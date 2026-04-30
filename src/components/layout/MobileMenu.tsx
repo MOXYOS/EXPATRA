@@ -62,10 +62,7 @@ export function MobileMenu({ scrolled }: { scrolled: boolean }) {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button className={cn(
-          "p-2 rounded-full transition-colors",
-          scrolled ? "text-primary hover:bg-primary/10" : "text-white hover:bg-white/10"
-        )}>
+        <button className="p-2 rounded-full transition-colors text-primary hover:bg-primary/5">
           <Menu size={28} />
         </button>
       </SheetTrigger>
