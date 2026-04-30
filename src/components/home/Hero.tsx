@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { fadeUp, staggerContainer } from "@/lib/animations"
 import { ChevronRight, ShieldCheck, Star } from "lucide-react"
 
@@ -84,8 +85,13 @@ export function Hero() {
           >
             <div className="flex -space-x-3">
               {[1,2,3,4].map(i => (
-                <div key={i} className="size-10 rounded-full border-2 border-primary-dark bg-surface shadow-lg flex items-center justify-center overflow-hidden">
-                   <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" />
+                <div key={i} className="relative size-10 rounded-full border-2 border-primary-dark bg-surface shadow-lg flex items-center justify-center overflow-hidden">
+                   <Image 
+                     src={`https://i.pravatar.cc/100?img=${i+10}`} 
+                     alt="User" 
+                     fill
+                     className="object-cover"
+                   />
                 </div>
               ))}
             </div>

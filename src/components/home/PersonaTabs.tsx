@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl"
 import { motion, AnimatePresence } from "framer-motion"
 import { Plane, TrendingUp, Sun, HeartPulse, Flag, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 export function PersonaTabs() {
@@ -137,10 +138,11 @@ export function PersonaTabs() {
                   </div>
                 </div>
                 <div className="lg:col-span-4 relative min-h-[300px] lg:min-h-full">
-                  <img 
+                  <Image 
                     src={activePersona.image} 
                     alt={activePersona.title} 
-                    className="absolute inset-0 w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent lg:bg-gradient-to-l" />
                 </div>
