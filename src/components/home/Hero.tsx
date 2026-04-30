@@ -10,7 +10,7 @@ export function Hero() {
   const t = useTranslations("hero")
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center pt-48 pb-20 overflow-hidden bg-white">
+    <section className="relative min-h-[90vh] flex items-center justify-center pt-64 pb-20 overflow-hidden bg-white">
       {/* Subtle Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-10%] size-[600px] bg-accent/5 rounded-full blur-[120px]" />
