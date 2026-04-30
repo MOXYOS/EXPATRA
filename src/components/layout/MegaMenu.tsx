@@ -2,7 +2,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,6 +16,8 @@ import { ArrowRight, BookOpen, MessageCircle, Shield, Building2, Home, User, Bri
 
 export function MegaMenu({ scrolled }: { scrolled: boolean }) {
   const t = useTranslations("nav")
+  const m = useTranslations("megaMenu")
+  
   const triggerClass = cn(
     "group bg-transparent hover:bg-primary/5 focus:bg-primary/5 data-[state=open]:bg-primary/5 transition-all duration-300 rounded-full px-4 py-2 text-sm font-medium",
     "text-primary/80 hover:text-primary"
@@ -31,27 +33,27 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-primary">
-              <MenuColumn title="Legal Stay in Colombia" icon={<Shield className="size-5 text-primary" />}>
-                <ListItem href="/colombia-visas/tourism-stamp-extension" title="Tourism Stamp Extension" />
-                <ListItem href="/colombia-visas/digital-nomad-visa" title="Digital Nomad Visa">
+              <MenuColumn title={m("categories.legalStay")} icon={<Shield className="size-5 text-primary" />}>
+                <ListItem href="/colombia-visas/tourism-stamp-extension" title={m("links.tourismExtension")} />
+                <ListItem href="/colombia-visas/digital-nomad-visa" title={m("links.nomadVisa")}>
                   <div className="flex gap-2 mt-1">
-                    <span className="text-[9px] bg-primary/10 text-primary px-1.5 py-0.5 rounded-full font-bold">WORKER</span>
-                    <span className="text-[9px] bg-primary/10 text-primary px-1.5 py-0.5 rounded-full font-bold">ENTREPRENEUR</span>
+                    <span className="text-[9px] bg-primary/10 text-primary px-1.5 py-0.5 rounded-full font-bold uppercase">Work</span>
+                    <span className="text-[9px] bg-primary/10 text-primary px-1.5 py-0.5 rounded-full font-bold uppercase">Business</span>
                   </div>
                 </ListItem>
-                <ListItem href="/insurance-colombia" title="Health Policy" />
+                <ListItem href="/insurance-colombia" title={m("links.healthPolicy")} />
               </MenuColumn>
-              <MenuColumn title="Documentation" icon={<BookOpen className="size-5 text-primary" />}>
-                <ListItem href="/other-services/fbi-background-check" title="FBI Background Check" />
-                <ListItem href="/other-services/us-apostille" title="US Apostille" />
-                <ListItem href="/other-services/official-translations" title="Official Translations" />
+              <MenuColumn title={m("categories.documentation")} icon={<BookOpen className="size-5 text-primary" />}>
+                <ListItem href="/other-services/fbi-background-check" title={m("links.fbiCheck")} />
+                <ListItem href="/other-services/us-apostille" title={m("links.usApostille")} />
+                <ListItem href="/other-services/official-translations" title={m("links.translations")} />
               </MenuColumn>
               <HelpColumn 
-                title="Looking for Help?" 
+                title={m("categories.help")} 
                 links={[
-                  { href: "/book-an-appointment", title: "Specialized Advice" },
-                  { href: "/business-in-colombia/company-incorporation", title: "Start a Business" },
-                  { href: "/faqs", title: "FAQs" }
+                  { href: "/book-an-appointment", title: m("links.specializedAdvice") },
+                  { href: "/business-in-colombia/company-incorporation", title: m("links.startBusiness") },
+                  { href: "/faqs", title: m("links.faqs") }
                 ]}
                 blogPosts={[
                   { href: "/blog/medellin-nomad-guide", title: "Ultimate Medellín Guide" },
@@ -69,21 +71,21 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-accent">
-              <MenuColumn title="Company Investment" icon={<Building2 className="size-5 text-accent" />}>
-                <ListItem href="/business-in-colombia/company-incorporation" title="Company Creation (SAS)" />
-                <ListItem href="/colombia-visas/business-owner-visa" title="Business Visa" />
-                <ListItem href="/business-in-colombia/foreign-direct-investment" title="Foreign Investment Certificate" />
+              <MenuColumn title={m("categories.investment")} icon={<Building2 className="size-5 text-accent" />}>
+                <ListItem href="/business-in-colombia/company-incorporation" title={m("links.companyIncorporation")} />
+                <ListItem href="/colombia-visas/business-owner-visa" title={m("links.businessVisa")} />
+                <ListItem href="/business-in-colombia/foreign-direct-investment" title={m("links.fdiCertificate")} />
               </MenuColumn>
-              <MenuColumn title="Real Estate" icon={<Home className="size-5 text-accent" />}>
-                <ListItem href="/real-estate/property-listings" title="Property Purchase" />
-                <ListItem href="/colombia-visas/real-estate-visa" title="Real Estate Investment Visa" />
-                <ListItem href="/real-estate/legal-services" title="Legal Real Estate Services" />
+              <MenuColumn title={m("categories.realEstate")} icon={<Home className="size-5 text-accent" />}>
+                <ListItem href="/real-estate/property-listings" title={m("links.propertyListings")} />
+                <ListItem href="/colombia-visas/real-estate-visa" title={m("links.realEstateVisa")} />
+                <ListItem href="/real-estate/legal-services" title={m("links.legalRE")} />
               </MenuColumn>
               <HelpColumn 
-                title="Help & Insights" 
+                title={m("categories.insights")} 
                 links={[
-                  { href: "/book-an-appointment", title: "Investment Strategy" },
-                  { href: "/faqs", title: "Investment FAQs" }
+                  { href: "/book-an-appointment", title: m("links.specializedAdvice") },
+                  { href: "/faqs", title: m("links.faqs") }
                 ]}
                 blogPosts={[
                   { href: "/blog/real-estate-market", title: "Real Estate Market 2026" },
@@ -101,21 +103,21 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-colombia-yellow">
-              <MenuColumn title="Legal Stay" icon={<Shield className="size-5 text-colombia-yellow" />}>
-                <ListItem href="/colombia-visas/tourism-stamp-extension" title="Tourism Stamp Extension" />
-                <ListItem href="/colombia-visas/retirement-visa" title="Retirement Visa (M-Pension)" />
-                <ListItem href="/insurance-colombia" title="Health Policy" />
+              <MenuColumn title={m("categories.legalStay")} icon={<Shield className="size-5 text-colombia-yellow" />}>
+                <ListItem href="/colombia-visas/tourism-stamp-extension" title={m("links.tourismExtension")} />
+                <ListItem href="/colombia-visas/retirement-visa" title={m("links.retirementVisa")} />
+                <ListItem href="/insurance-colombia" title={m("links.healthPolicy")} />
               </MenuColumn>
-              <MenuColumn title="Documentation" icon={<BookOpen className="size-5 text-colombia-yellow" />}>
-                <ListItem href="/other-services/fbi-background-check" title="FBI Background Check" />
-                <ListItem href="/other-services/us-apostille" title="US Apostille" />
-                <ListItem href="/other-services/official-translations" title="Official Translations" />
+              <MenuColumn title={m("categories.documentation")} icon={<BookOpen className="size-5 text-colombia-yellow" />}>
+                <ListItem href="/other-services/fbi-background-check" title={m("links.fbiCheck")} />
+                <ListItem href="/other-services/us-apostille" title={m("links.usApostille")} />
+                <ListItem href="/other-services/official-translations" title={m("links.translations")} />
               </MenuColumn>
               <HelpColumn 
-                title="Retirement Life" 
+                title={m("categories.help")} 
                 links={[
-                  { href: "/book-an-appointment", title: "Consultation" },
-                  { href: "/faqs", title: "Retirement FAQs" }
+                  { href: "/book-an-appointment", title: m("links.specializedAdvice") },
+                  { href: "/faqs", title: m("links.faqs") }
                 ]}
                 blogPosts={[
                   { href: "/blog/best-cities-retire", title: "Top Cities to Retire" },
@@ -133,21 +135,14 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-success">
-              <MenuColumn title="Insurance Types" icon={<Shield className="size-5 text-success" />}>
-                <ListItem href="/insurance-colombia/tourism-policy" title="For Tourism" />
-                <ListItem href="/insurance-colombia/visa-policy" title="For Visa Application" />
-                <div className="mt-4 flex flex-wrap gap-1">
-                  {["Nomads", "Retirees", "Investors"].map(tag => (
-                    <span key={tag} className="text-[8px] bg-muted/40 text-muted-foreground px-2 py-0.5 rounded-full uppercase tracking-tighter">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <MenuColumn title={m("categories.insurance")} icon={<Shield className="size-5 text-success" />}>
+                <ListItem href="/insurance-colombia/tourism-policy" title={m("links.tourismInsurance")} />
+                <ListItem href="/insurance-colombia/visa-policy" title={m("links.visaInsurance")} />
               </MenuColumn>
-              <MenuColumn title="Quick Actions" icon={<ArrowRight className="size-5 text-success" />}>
-                <ListItem href="/quote-now" title="Quote & Get it Now" className="font-bold text-success" />
-                <ListItem href="/contact-us" title="WhatsApp Advice" />
-                <ListItem href="/faqs" title="Insurance FAQs" />
+              <MenuColumn title={m("categories.actions")} icon={<ArrowRight className="size-5 text-success" />}>
+                <ListItem href="/quote-now" title={m("links.quoteNow")} className="font-bold text-success" />
+                <ListItem href="/contact-us" title={m("links.whatsapp")} />
+                <ListItem href="/faqs" title={m("links.faqs")} />
               </MenuColumn>
               <div className="bg-success/5 p-6 rounded-2xl flex flex-col justify-center text-center border border-success/10">
                 <div className="bg-success/20 size-12 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -156,7 +151,7 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
                 <h4 className="font-display font-bold text-lg text-primary mb-2">Need Coverage Fast?</h4>
                 <p className="text-xs text-muted-foreground mb-6">Approval in under 24 hours with our premium partners.</p>
                 <Link href="/quote-now" className="bg-success text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-success-dark transition-all shadow-lg shadow-success/20 scale-hover">
-                  Get Free Quote
+                  {m("links.quoteNow")}
                 </Link>
               </div>
             </MenuContainer>
@@ -170,21 +165,21 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-colombia-red">
-              <MenuColumn title="Legal Stay" icon={<Shield className="size-5 text-colombia-red" />}>
-                <ListItem href="/colombia-visas/tourism-stamp-extension" title="Stamp Extension" />
+              <MenuColumn title={m("categories.legalStay")} icon={<Shield className="size-5 text-colombia-red" />}>
+                <ListItem href="/colombia-visas/tourism-stamp-extension" title={m("links.tourismExtension")} />
                 <ListItem href="/colombia-visas" title="Visa Support" />
-                <ListItem href="/insurance-colombia" title="Health Policy" />
+                <ListItem href="/insurance-colombia" title={m("links.healthPolicy")} />
               </MenuColumn>
-              <MenuColumn title="Documentation" icon={<BookOpen className="size-5 text-colombia-red" />}>
-                <ListItem href="/other-services/passport-renewal" title="Passport Renewal" className="font-bold text-colombia-red" />
-                <ListItem href="/other-services/fbi-background-check" title="FBI Check" />
-                <ListItem href="/other-services/us-apostille" title="US Apostille" />
+              <MenuColumn title={m("categories.documentation")} icon={<BookOpen className="size-5 text-colombia-red" />}>
+                <ListItem href="/other-services/passport-renewal" title={m("links.passportRenewal")} className="font-bold text-colombia-red" />
+                <ListItem href="/other-services/fbi-background-check" title={m("links.fbiCheck")} />
+                <ListItem href="/other-services/us-apostille" title={m("links.usApostille")} />
               </MenuColumn>
               <HelpColumn 
-                title="Expat Guides" 
+                title={m("categories.guides")} 
                 links={[
-                  { href: "/book-an-appointment", title: "Legal Advice" },
-                  { href: "/faqs", title: "US Citizens FAQs" }
+                  { href: "/book-an-appointment", title: m("links.legalAdvice") },
+                  { href: "/faqs", title: m("links.faqs") }
                 ]}
                 blogPosts={[
                   { href: "/blog/us-tax-obligations", title: "Tax Obligations Guide" },

@@ -9,52 +9,53 @@ import { cn } from "@/lib/utils"
 
 export function MobileMenu({ scrolled }: { scrolled: boolean }) {
   const t = useTranslations("nav")
+  const m = useTranslations("megaMenu")
   const menuItems = [
     {
       title: t("digitalNomad"),
       icon: <Briefcase className="size-5 text-primary" />,
       sublinks: [
-        { href: "/colombia-visas/tourism-stamp-extension", label: "Tourism Stamp Extension" },
-        { href: "/colombia-visas/digital-nomad-visa", label: "Digital Nomad Visa" },
-        { href: "/insurance-colombia", label: "Health Policy" },
-        { href: "/other-services/fbi-background-check", label: "FBI Background Check" }
+        { href: "/colombia-visas/tourism-stamp-extension", label: m("links.tourismExtension") },
+        { href: "/colombia-visas/digital-nomad-visa", label: m("links.nomadVisa") },
+        { href: "/insurance-colombia", label: m("links.healthPolicy") },
+        { href: "/other-services/fbi-background-check", label: m("links.fbiCheck") }
       ]
     },
     {
       title: t("invest"),
       icon: <Building2 className="size-5 text-accent" />,
       sublinks: [
-        { href: "/business-in-colombia/company-incorporation", label: "Company Creation (SAS)" },
-        { href: "/colombia-visas/business-owner-visa", label: "Business Visa" },
-        { href: "/real-estate/property-listings", label: "Property Purchase" },
-        { href: "/colombia-visas/real-estate-visa", label: "Real Estate Investment Visa" }
+        { href: "/business-in-colombia/company-incorporation", label: m("links.companyIncorporation") },
+        { href: "/colombia-visas/business-owner-visa", label: m("links.businessVisa") },
+        { href: "/real-estate/property-listings", label: m("links.propertyListings") },
+        { href: "/colombia-visas/real-estate-visa", label: m("links.realEstateVisa") }
       ]
     },
     {
       title: t("retired"),
       icon: <User className="size-5 text-colombia-yellow" />,
       sublinks: [
-        { href: "/colombia-visas/retirement-visa", label: "Retirement Visa (M-Pension)" },
-        { href: "/insurance-colombia", label: "Health Policy" },
-        { href: "/other-services/us-apostille", label: "US Apostille" }
+        { href: "/colombia-visas/retirement-visa", label: m("links.retirementVisa") },
+        { href: "/insurance-colombia", label: m("links.healthPolicy") },
+        { href: "/other-services/us-apostille", label: m("links.usApostille") }
       ]
     },
     {
       title: t("health"),
       icon: <Shield className="size-5 text-success" />,
       sublinks: [
-        { href: "/insurance-colombia/tourism-policy", label: "For Tourism" },
-        { href: "/insurance-colombia/visa-policy", label: "For Visa Application" },
-        { href: "/quote-now", label: "Get a Free Quote" }
+        { href: "/insurance-colombia/tourism-policy", label: m("links.tourismInsurance") },
+        { href: "/insurance-colombia/visa-policy", label: m("links.visaInsurance") },
+        { href: "/quote-now", label: m("links.quoteNow") }
       ]
     },
     {
       title: t("usCitizens"),
       icon: <ArrowRight className="size-5 text-colombia-red" />,
       sublinks: [
-        { href: "/other-services/passport-renewal", label: "Passport Renewal" },
-        { href: "/other-services/fbi-background-check", label: "FBI Check" },
-        { href: "/other-services/us-apostille", label: "US Apostille" }
+        { href: "/other-services/passport-renewal", label: m("links.passportRenewal") },
+        { href: "/other-services/fbi-background-check", label: m("links.fbiCheck") },
+        { href: "/other-services/us-apostille", label: m("links.usApostille") }
       ]
     }
   ]

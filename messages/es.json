@@ -16,6 +16,43 @@
     "becomePartner": "Ser Socio",
     "explore": "Explorar Todos los Servicios"
   },
+  "megaMenu": {
+    "categories": {
+      "legalStay": "Estancia Legal en Colombia",
+      "documentation": "Documentación",
+      "help": "¿Busca Ayuda?",
+      "investment": "Inversión Empresarial",
+      "realEstate": "Bienes Raíces",
+      "insights": "Ayuda e Información",
+      "insurance": "Tipos de Seguros",
+      "actions": "Acciones Rápidas",
+      "guides": "Guías para Expatriados"
+    },
+    "links": {
+      "nomadVisa": "Visa de Nómada Digital",
+      "tourismExtension": "Extensión de Sello de Turismo",
+      "healthPolicy": "Póliza de Salud",
+      "fbiCheck": "Verificación del FBI",
+      "usApostille": "Apostilla de EE.UU.",
+      "translations": "Traducciones Oficiales",
+      "specializedAdvice": "Asesoría Especializada",
+      "startBusiness": "Iniciar un Negocio",
+      "faqs": "Preguntas Frecuentes",
+      "companyIncorporation": "Creación de Empresa (SAS)",
+      "businessVisa": "Visa de Negocios",
+      "fdiCertificate": "Certificado de Inversión Extranjera",
+      "propertyListings": "Compra de Propiedad",
+      "realEstateVisa": "Visa de Inversión en Bienes Raíces",
+      "legalRE": "Servicios Legales Inmobiliarios",
+      "retirementVisa": "Visa de Jubilación (M-Pensionado)",
+      "tourismInsurance": "Para Turismo",
+      "visaInsurance": "Para Solicitud de Visa",
+      "quoteNow": "Cotizar y Obtener Ahora",
+      "whatsapp": "Asesoría por WhatsApp",
+      "passportRenewal": "Renovación de Pasaporte",
+      "legalAdvice": "Asesoría Legal"
+    }
+  },
   "footer": {
     "desc": "Su portal integral y mejor aliado para vivir, invertir o jubilarse en el sueño colombiano.",
     "servicesTitle": "Servicios para Expatriados",

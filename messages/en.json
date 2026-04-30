@@ -16,6 +16,43 @@
     "becomePartner": "Become a Partner",
     "explore": "Explore All Services"
   },
+  "megaMenu": {
+    "categories": {
+      "legalStay": "Legal Stay in Colombia",
+      "documentation": "Documentation",
+      "help": "Looking for Help?",
+      "investment": "Company Investment",
+      "realEstate": "Real Estate",
+      "insights": "Help & Insights",
+      "insurance": "Insurance Types",
+      "actions": "Quick Actions",
+      "guides": "Expat Guides"
+    },
+    "links": {
+      "nomadVisa": "Digital Nomad Visa",
+      "tourismExtension": "Tourism Stamp Extension",
+      "healthPolicy": "Health Policy",
+      "fbiCheck": "FBI Background Check",
+      "usApostille": "US Apostille",
+      "translations": "Official Translations",
+      "specializedAdvice": "Specialized Advice",
+      "startBusiness": "Start a Business",
+      "faqs": "FAQs",
+      "companyIncorporation": "Company Creation (SAS)",
+      "businessVisa": "Business Visa",
+      "fdiCertificate": "Foreign Investment Certificate",
+      "propertyListings": "Property Purchase",
+      "realEstateVisa": "Real Estate Investment Visa",
+      "legalRE": "Legal Real Estate Services",
+      "retirementVisa": "Retirement Visa (M-Pension)",
+      "tourismInsurance": "For Tourism",
+      "visaInsurance": "For Visa Application",
+      "quoteNow": "Quote & Get it Now",
+      "whatsapp": "WhatsApp Advice",
+      "passportRenewal": "Passport Renewal",
+      "legalAdvice": "Legal Advice"
+    }
+  },
   "footer": {
     "desc": "Your comprehensive gateway and best ally for living, investing, or retiring in the Colombian dream.",
     "servicesTitle": "Services for Expats",
