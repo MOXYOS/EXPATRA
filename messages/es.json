@@ -13,7 +13,30 @@
     "contact": "Contacto",
     "quoteNow": "Cotizar Ahora",
     "workWithUs": "Trabaja con Nosotros",
-    "becomePartner": "Ser Socio"
+    "becomePartner": "Ser Socio",
+    "explore": "Explorar Todos los Servicios"
+  },
+  "footer": {
+    "desc": "Su portal integral y mejor aliado para vivir, invertir o jubilarse en el sueño colombiano.",
+    "servicesTitle": "Servicios para Expatriados",
+    "guideTitle": "Guía Integral",
+    "lookingForTitle": "Buscando",
+    "allServices": "Todos los Servicios",
+    "visas": "Visas Colombia",
+    "business": "Negocios en Colombia",
+    "health": "Póliza de Salud",
+    "realEstate": "Bienes Raíces",
+    "otherServices": "Otros Servicios",
+    "community": "Comunidad en Facebook",
+    "faqCenter": "Centro de Ayuda",
+    "tours": "Tours en Colombia",
+    "integration": "Guía de Integración",
+    "consultation": "Consulta de Visa",
+    "contactUs": "Contáctenos",
+    "pqr": "PQR (Quejas)",
+    "rights": "Todos los derechos reservados.",
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad"
   },
   "hero": {
     "badge": "Con la confianza de más de 10.000 expatriados",
@@ -67,14 +90,5 @@
     "realEstate": "Bienes Raíces",
     "realEstateDesc": "Compre, venda o alquile propiedades de forma segura en Colombia.",
     "learnMore": "Saber Más"
-  },
-  "lostPassport": {
-    "hero_title": "¿Perdió su pasaporte en Colombia?",
-    "hero_sub": "Estamos aquí para ayudar — 24/7",
-    "emergency_cta": "Contáctenos por WhatsApp"
-  },
-  "tour": {
-    "hero_title": "Explore Colombia como nunca antes",
-    "book_now": "Reservar este Tour"
   }
 }

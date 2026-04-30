@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export function Navbar() {
+  const t = useTranslations("nav");
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -50,7 +51,7 @@ export function Navbar() {
 
           <div className="hidden lg:flex items-center gap-4">
              <Button variant="default" className="bg-primary hover:bg-primary-dark text-white rounded-full">
-               Get Advice Now →
+               {t("getAdvice")} →
              </Button>
           </div>
           
@@ -60,13 +61,13 @@ export function Navbar() {
         </div>
         
         <div className={`hidden lg:flex items-center justify-center gap-6 pb-3 text-sm font-medium transition-colors ${scrolled ? "text-muted-foreground" : "text-white/80"}`}>
-          <Link href="/services" className="hover:text-primary transition-colors">Services ▾</Link>
-          <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
-          <Link href="/about-us" className="hover:text-primary transition-colors">About Us</Link>
-          <Link href="/faqs" className="hover:text-primary transition-colors">FAQs</Link>
-          <Link href="/contact-us" className="hover:text-primary transition-colors">Contact</Link>
-          <Link href="/quote-now" className="hover:text-primary transition-colors">Quote Now</Link>
-          <Link href="/become-a-partner" className="hover:text-primary transition-colors">Become a Partner</Link>
+          <Link href="/services" className="hover:text-primary transition-colors">{t("services")} ▾</Link>
+          <Link href="/blog" className="hover:text-primary transition-colors">{t("blog")}</Link>
+          <Link href="/about-us" className="hover:text-primary transition-colors">{t("aboutUs")}</Link>
+          <Link href="/faqs" className="hover:text-primary transition-colors">{t("faqs")}</Link>
+          <Link href="/contact-us" className="hover:text-primary transition-colors">{t("contact")}</Link>
+          <Link href="/quote-now" className="hover:text-primary transition-colors">{t("quoteNow")}</Link>
+          <Link href="/become-a-partner" className="hover:text-primary transition-colors">{t("becomePartner")}</Link>
         </div>
       </div>
     </motion.header>

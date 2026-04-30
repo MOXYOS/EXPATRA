@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 export function MobileMenu({ scrolled }: { scrolled: boolean }) {
+  const t = useTranslations("nav")
   const menuItems = [
     {
-      title: "I'm a Digital Nomad",
+      title: t("digitalNomad"),
       icon: <Briefcase className="size-5 text-primary" />,
       sublinks: [
         { href: "/colombia-visas/tourism-stamp-extension", label: "Tourism Stamp Extension" },
@@ -19,7 +20,7 @@ export function MobileMenu({ scrolled }: { scrolled: boolean }) {
       ]
     },
     {
-      title: "I Want to Invest",
+      title: t("invest"),
       icon: <Building2 className="size-5 text-accent" />,
       sublinks: [
         { href: "/business-in-colombia/company-incorporation", label: "Company Creation (SAS)" },
@@ -29,7 +30,7 @@ export function MobileMenu({ scrolled }: { scrolled: boolean }) {
       ]
     },
     {
-      title: "I'm Retired",
+      title: t("retired"),
       icon: <User className="size-5 text-colombia-yellow" />,
       sublinks: [
         { href: "/colombia-visas/retirement-visa", label: "Retirement Visa (M-Pension)" },
@@ -38,7 +39,7 @@ export function MobileMenu({ scrolled }: { scrolled: boolean }) {
       ]
     },
     {
-      title: "Get Health Policy",
+      title: t("health"),
       icon: <Shield className="size-5 text-success" />,
       sublinks: [
         { href: "/insurance-colombia/tourism-policy", label: "For Tourism" },
@@ -47,7 +48,7 @@ export function MobileMenu({ scrolled }: { scrolled: boolean }) {
       ]
     },
     {
-      title: "US Citizens Services",
+      title: t("usCitizens"),
       icon: <ArrowRight className="size-5 text-colombia-red" />,
       sublinks: [
         { href: "/other-services/passport-renewal", label: "Passport Renewal" },
@@ -105,20 +106,20 @@ export function MobileMenu({ scrolled }: { scrolled: boolean }) {
           <div className="mt-8 space-y-2">
             <Link href="/blog" className="flex items-center gap-3 p-4 rounded-2xl hover:bg-surface transition-colors">
               <BookOpen className="size-5 text-muted-foreground" />
-              <span className="font-semibold text-primary">Blog & Guides</span>
+              <span className="font-semibold text-primary">{t("blog")} & Guides</span>
             </Link>
             <Link href="/faqs" className="flex items-center gap-3 p-4 rounded-2xl hover:bg-surface transition-colors">
               <MessageCircle className="size-5 text-muted-foreground" />
-              <span className="font-semibold text-primary">FAQs</span>
+              <span className="font-semibold text-primary">{t("faqs")}</span>
             </Link>
           </div>
 
           <div className="mt-12 space-y-4 px-4 pb-12">
             <Button className="w-full h-14 rounded-2xl bg-primary hover:bg-primary-dark text-white font-bold text-lg shadow-lg shadow-primary/10">
-              Get Advice Now →
+              {t("getAdvice")} →
             </Button>
             <Button variant="outline" className="w-full h-14 rounded-2xl border-primary/20 text-primary font-bold text-lg">
-              Contact Support
+              {t("contact")}
             </Button>
           </div>
         </div>

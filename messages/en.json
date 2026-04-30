@@ -13,7 +13,30 @@
     "contact": "Contact",
     "quoteNow": "Quote Now",
     "workWithUs": "Work With Us",
-    "becomePartner": "Become a Partner"
+    "becomePartner": "Become a Partner",
+    "explore": "Explore All Services"
+  },
+  "footer": {
+    "desc": "Your comprehensive gateway and best ally for living, investing, or retiring in the Colombian dream.",
+    "servicesTitle": "Services for Expats",
+    "guideTitle": "Comprehensive Guide",
+    "lookingForTitle": "Looking For",
+    "allServices": "All Services",
+    "visas": "Colombia Visas",
+    "business": "Business in Colombia",
+    "health": "Health Policy",
+    "realEstate": "Real Estate",
+    "otherServices": "Other Services",
+    "community": "Facebook Community",
+    "faqCenter": "FAQ Center",
+    "tours": "Colombia Tours",
+    "integration": "Integration Guide",
+    "consultation": "Visa Consultation",
+    "contactUs": "Contact Us",
+    "pqr": "PQR (Complaints)",
+    "rights": "All rights reserved.",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy"
   },
   "hero": {
     "badge": "Trusted by 10,000+ Expats Worldwide",
@@ -67,14 +90,5 @@
     "realEstate": "Real Estate",
     "realEstateDesc": "Buy, sell, or rent properties safely in Colombia.",
     "learnMore": "Learn More"
-  },
-  "lostPassport": {
-    "hero_title": "Lost Your Passport in Colombia?",
-    "hero_sub": "We're Here to Help — 24/7",
-    "emergency_cta": "Contact Us Now on WhatsApp"
-  },
-  "tour": {
-    "hero_title": "Explore Colombia Like Never Before",
-    "book_now": "Book This Tour"
   }
 }

@@ -11,9 +11,11 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
+import { useTranslations } from "next-intl"
 import { ArrowRight, BookOpen, MessageCircle, Shield, Building2, Home, User, Briefcase } from "lucide-react"
 
 export function MegaMenu({ scrolled }: { scrolled: boolean }) {
+  const t = useTranslations("nav")
   const triggerClass = cn(
     "group bg-transparent hover:bg-white/10 focus:bg-white/10 data-[state=open]:bg-white/10 transition-all duration-300 rounded-full px-4 py-2 text-sm font-medium",
     scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-white/80"
@@ -25,7 +27,7 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
         {/* I'm a Digital Nomad */}
         <NavigationMenuItem>
           <NavigationMenuTrigger className={triggerClass}>
-            <span className="flex items-center gap-1.5"><Briefcase className="size-4 opacity-70" /> I&apos;m a Digital Nomad</span>
+            <span className="flex items-center gap-1.5"><Briefcase className="size-4 opacity-70" /> {t("digitalNomad")}</span>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-primary">
@@ -63,7 +65,7 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
         {/* I Want to Invest */}
         <NavigationMenuItem>
           <NavigationMenuTrigger className={triggerClass}>
-            <span className="flex items-center gap-1.5"><Building2 className="size-4 opacity-70" /> I Want to Invest</span>
+            <span className="flex items-center gap-1.5"><Building2 className="size-4 opacity-70" /> {t("invest")}</span>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-accent">
@@ -95,7 +97,7 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
         {/* I'm Retired */}
         <NavigationMenuItem>
           <NavigationMenuTrigger className={triggerClass}>
-            <span className="flex items-center gap-1.5"><User className="size-4 opacity-70" /> I&apos;m Retired</span>
+            <span className="flex items-center gap-1.5"><User className="size-4 opacity-70" /> {t("retired")}</span>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-colombia-yellow">
@@ -127,7 +129,7 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
         {/* Get Health Policy */}
         <NavigationMenuItem>
           <NavigationMenuTrigger className={triggerClass}>
-            <span className="flex items-center gap-1.5"><Shield className="size-4 opacity-70" /> Get Health Policy</span>
+            <span className="flex items-center gap-1.5"><Shield className="size-4 opacity-70" /> {t("health")}</span>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-success">
@@ -164,7 +166,7 @@ export function MegaMenu({ scrolled }: { scrolled: boolean }) {
         {/* US Citizens Services */}
         <NavigationMenuItem>
           <NavigationMenuTrigger className={triggerClass}>
-            <span className="flex items-center gap-1.5"><ArrowRight className="size-4 opacity-70" /> US Citizens</span>
+            <span className="flex items-center gap-1.5"><ArrowRight className="size-4 opacity-70" /> {t("usCitizens")}</span>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <MenuContainer border="border-t-colombia-red">
