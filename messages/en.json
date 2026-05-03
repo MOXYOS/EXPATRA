@@ -71,6 +71,7 @@
     "consultation": "Visa Consultation",
     "contactUs": "Contact Us",
     "pqr": "PQR (Complaints)",
+    "quoteNow": "Quote Now",
     "rights": "All rights reserved.",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy"
@@ -127,5 +128,14 @@
     "realEstate": "Real Estate",
     "realEstateDesc": "Buy, sell, or rent properties safely in Colombia.",
     "learnMore": "Learn More"
+  },
+  "underConstruction": {
+    "badge": "Coming Soon",
+    "title": "We're building something extraordinary",
+    "subtitle": "Expatra is evolving to serve you better. We are currently updating our platform to provide the most comprehensive experience for expats in Colombia.",
+    "cta": "Get Early Access",
+    "follow": "Follow our journey",
+    "backSoon": "We'll be back shortly."
   }
 }
+

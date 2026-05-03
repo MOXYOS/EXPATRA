@@ -71,6 +71,7 @@
     "consultation": "Consulta de Visa",
     "contactUs": "Contáctenos",
     "pqr": "PQR (Quejas)",
+    "quoteNow": "Cotizar Ahora",
     "rights": "Todos los derechos reservados.",
     "terms": "Términos y Condiciones",
     "privacy": "Política de Privacidad"
@@ -127,5 +128,14 @@
     "realEstate": "Bienes Raíces",
     "realEstateDesc": "Compre, venda o alquile propiedades de forma segura en Colombia.",
     "learnMore": "Saber Más"
+  },
+  "underConstruction": {
+    "badge": "Próximamente",
+    "title": "Estamos construyendo algo extraordinario",
+    "subtitle": "Expatra está evolucionando para servirle mejor. Actualmente estamos actualizando nuestra plataforma para brindar la experiencia más completa para expatriados en Colombia.",
+    "cta": "Obtener Acceso Temprano",
+    "follow": "Siga nuestro viaje",
+    "backSoon": "Volveremos pronto."
   }
 }
+
